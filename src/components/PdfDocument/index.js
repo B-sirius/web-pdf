@@ -33,9 +33,11 @@ const image = getChartsBlobImage({
 const PDFDocument = () => (
   <Document>
     <Page size="A4" style={styles.page}>
+      {/* 每页固定页头 */}
       <Text style={styles.header} fixed>
         Wiredcreaft
       </Text>
+      {/* 主体内容 */}
       <Text style={styles.title}>检测报告</Text>
       <Image src={image} />
       <Text style={styles.subtitle}>
@@ -44,12 +46,14 @@ const PDFDocument = () => (
       <Text style={styles.text}>
         一些文字内容
       </Text>
+      {/* 使用break换页 */}
       <Text style={styles.text} break>
         第二页的内容
       </Text>
       <Text style={styles.text} break>
         第三页的内容
       </Text>
+      {/* 每页固定页脚 */}
       <Text style={styles.pageNumber} render={({ pageNumber, totalPages }) => (
         `${pageNumber} / ${totalPages}`
       )} fixed />
