@@ -1,5 +1,5 @@
 // mobile不支持 PDFViewer
-// 目前采用的解决方法 https://github.com/diegomura/react-pdf/issues/1113#issuecomment-781053667
+// 解决方法 https://github.com/diegomura/react-pdf/issues/1113#issuecomment-781053667
 
 import { useState } from 'react';
 import { BlobProvider, PDFDownloadLink } from '@react-pdf/renderer';
